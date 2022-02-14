@@ -50,7 +50,7 @@
         <!--<security:csrf disabled="true"/>-->
 
         <!--remember me 记住密码开启-->
-        <security:remember-me token-validity-seconds="120"/>
+        <security:remember-me token-validity-seconds="120" remember-me-parameter="remember-me" data-source-ref="dataSource"/>
     </security:http>
 
     <!--引入BCryptPasswordEncoder-->

@@ -1,2 +1,10 @@
 Spring Security的封装FilterChain的实际对象为SecurityFilterChain
 认证由 UsernamePasswordAuthenticationFilter.java来实现，如果想要自定义，则需要实现UserDetailsService.java接口
+将token信息存储到数据库
+CREATE TABLE `persistent_logins` (
+`username` varchar(64) NOT NULL,
+`series` varchar(64) NOT NULL,
+`token` varchar(64) NOT NULL,
+`last_used` timestamp NOT NULL,
+PRIMARY KEY (`series`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
