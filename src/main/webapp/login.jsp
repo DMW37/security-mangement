@@ -49,7 +49,7 @@
 				<div class="row">
 					<div class="col-xs-8">
 						<div class="checkbox icheck">
-							<label><input type="checkbox" name="remember-me" value="true"> 记住 下次自动登录</label>
+							<label><input type="checkbox" name="remember-me" value="1"> 记住 下次自动登录</label>
 						</div>
 					</div>
 					<!-- /.col -->

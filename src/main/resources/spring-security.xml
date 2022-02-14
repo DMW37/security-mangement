@@ -48,6 +48,9 @@
 
         <!--关闭csrf过滤器(关闭后不安全，注释掉)-->
         <!--<security:csrf disabled="true"/>-->
+
+        <!--remember me 记住密码开启-->
+        <security:remember-me token-validity-seconds="120"/>
     </security:http>
 
     <!--引入BCryptPasswordEncoder-->
