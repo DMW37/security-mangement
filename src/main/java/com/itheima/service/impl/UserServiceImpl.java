@@ -76,7 +76,13 @@ public class UserServiceImpl implements UserService {
             while (iterator.hasNext()) {
                 authorities.add(new SimpleGrantedAuthority(iterator.next().getRoleName()));
             }
-            UserDetails userDetails = new User(sysUser.getUsername(),  sysUser.getPassword(), authorities);
+            /**
+             * 状态是否开启
+             * 账户没有失效
+             * 凭证没有失效
+             * 账户没有被锁定
+             */
+            UserDetails userDetails = new User(sysUser.getUsername(),  sysUser.getPassword(), sysUser.getStatus()==1,true,true,true,authorities);
             return userDetails;
         } catch (Exception e) {
             e.printStackTrace();
