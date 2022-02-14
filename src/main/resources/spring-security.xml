@@ -52,12 +52,12 @@
 
     <!--开启SpringSecurity提供的默认认证测试-->
     <security:authentication-manager>
-        <security:authentication-provider>
-            <security:user-service>
-                <!--{noop}表示密码不加密-->
+        <security:authentication-provider user-service-ref="userServiceImpl">
+           <!-- <security:user-service>
+                &lt;!&ndash;{noop}表示密码不加密&ndash;&gt;
                 <security:user name="user" authorities="ROLE_USER" password="{noop}user"></security:user>
                 <security:user name="admin" authorities="ROLE_ADMIN" password="{noop}admin"></security:user>
-            </security:user-service>
+            </security:user-service>-->
         </security:authentication-provider>
     </security:authentication-manager>
 </beans>
