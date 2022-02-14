@@ -23,6 +23,7 @@
                         src="${pageContext.request.contextPath}/img/user2-160x160.jpg"
                         class="user-image" alt="User Image">
                     <span class="hidden-xs">
+                        <%--使用Security显示登入后的用户名--%>
 							<%--<security:authentication property="principal.username" />--%>
 							<security:authentication property="name"/>
 					</span>
