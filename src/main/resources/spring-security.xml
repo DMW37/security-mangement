@@ -50,6 +50,8 @@
         <!--<security:csrf disabled="true"/>-->
     </security:http>
 
+    <!--引入BCryptPasswordEncoder-->
+    <bean name="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
     <!--开启SpringSecurity提供的默认认证测试-->
     <security:authentication-manager>
         <security:authentication-provider user-service-ref="userServiceImpl">
@@ -58,6 +60,7 @@
                 <security:user name="user" authorities="ROLE_USER" password="{noop}user"></security:user>
                 <security:user name="admin" authorities="ROLE_ADMIN" password="{noop}admin"></security:user>
             </security:user-service>-->
+            <security:password-encoder ref="passwordEncoder"/>
         </security:authentication-provider>
     </security:authentication-manager>
 </beans>
