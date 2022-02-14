@@ -1,1 +1,2 @@
 Spring Security的封装FilterChain的实际对象为SecurityFilterChain
+认证由 UsernamePasswordAuthenticationFilter.java来实现，如果想要自定义，则需要实现UserDetailsService.java接口
