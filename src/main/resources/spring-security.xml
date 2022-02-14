@@ -44,10 +44,10 @@
                              authentication-failure-url="/failer.jsp"/>
         <!--配置退出登录信息-->
         <security:logout logout-url="/logout"
-                         logout-success-url="/login.jsp"/>
+                         logout-success-url="/login.jsp" />
 
-        <!--关闭csrf过滤器-->
-        <security:csrf disabled="true"/>
+        <!--关闭csrf过滤器(关闭后不安全，注释掉)-->
+        <!--<security:csrf disabled="true"/>-->
     </security:http>
 
     <!--开启SpringSecurity提供的默认认证测试-->
