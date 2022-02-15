@@ -44,13 +44,14 @@
                              authentication-failure-url="/failer.jsp"/>
         <!--配置退出登录信息-->
         <security:logout logout-url="/logout"
-                         logout-success-url="/login.jsp" />
+                         logout-success-url="/login.jsp"/>
 
         <!--关闭csrf过滤器(关闭后不安全，注释掉)-->
         <!--<security:csrf disabled="true"/>-->
 
         <!--remember me 记住密码开启-->
-        <security:remember-me token-validity-seconds="120" remember-me-parameter="remember-me" data-source-ref="dataSource"/>
+        <security:remember-me token-validity-seconds="120" remember-me-parameter="remember-me"
+                              data-source-ref="dataSource"/>
     </security:http>
 
     <!--引入BCryptPasswordEncoder-->
@@ -58,12 +59,14 @@
     <!--开启SpringSecurity提供的默认认证测试-->
     <security:authentication-manager>
         <security:authentication-provider user-service-ref="userServiceImpl">
-           <!-- <security:user-service>
-                &lt;!&ndash;{noop}表示密码不加密&ndash;&gt;
-                <security:user name="user" authorities="ROLE_USER" password="{noop}user"></security:user>
-                <security:user name="admin" authorities="ROLE_ADMIN" password="{noop}admin"></security:user>
-            </security:user-service>-->
+            <!-- <security:user-service>
+                 &lt;!&ndash;{noop}表示密码不加密&ndash;&gt;
+                 <security:user name="user" authorities="ROLE_USER" password="{noop}user"></security:user>
+                 <security:user name="admin" authorities="ROLE_ADMIN" password="{noop}admin"></security:user>
+             </security:user-service>-->
             <security:password-encoder ref="passwordEncoder"/>
         </security:authentication-provider>
     </security:authentication-manager>
+
+
 </beans>
