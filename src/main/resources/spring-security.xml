@@ -52,6 +52,8 @@
         <!--remember me 记住密码开启-->
         <security:remember-me token-validity-seconds="120" remember-me-parameter="remember-me"
                               data-source-ref="dataSource"/>
+        <!--security提供的403处理方案(单一!!!)-->
+        <security:access-denied-handler error-page="/403.jsp"/>
     </security:http>
 
     <!--引入BCryptPasswordEncoder-->
