@@ -50,7 +50,7 @@
     </filter-mapping>
 
     <!--异常处理-->
-    <error-page>
+    <!--<error-page>
         <error-code>403</error-code>
         <location>/403.jsp</location>
     </error-page>
@@ -63,6 +63,6 @@
     <error-page>
         <error-code>500</error-code>
         <location>/500.jsp</location>
-    </error-page>
+    </error-page>-->
 
 </web-app>
